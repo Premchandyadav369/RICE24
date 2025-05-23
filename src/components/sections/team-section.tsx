@@ -17,7 +17,7 @@ const coreTeamMembers: TeamMember[] = [
   { name: "Stephen", role: "Tech Lead", line: "Backend & mobile systems builder", avatarUrl: "https://i.postimg.cc/CL4bLY5y/Whats-App-Image-2025-05-20-at-16-28-23-deeb7ad2.jpg", initials: "S" },
   { name: "SriHarsha Vardhan", role: "UI/UX Lead", line: "Vernacular-first designer", avatarUrl: "https://i.postimg.cc/BQpW4LGx/harsha1.jpg", initials: "SV" },
   { name: "Praneeth", role: "Marketing", line: "Rural-urban outreach & GTM expert", avatarUrl: "https://i.postimg.cc/VsqTTTRV/praneeth.jpg", initials: "P" },
-  { name: "Suheb", role: "UI/UX Designer", line: "🎨 Detail-driven. Clean. Adaptive. Empathetic. Visual.", avatarUrl: "https://i.postimg.cc/J4ZLv2n1/Whats-App-Image-2025-05-21-at-17-06-54-5b7b43d0.jpg", initials: "SU" },
+  { name: "Suheb", role: "UI/UX Designer", line: "Detail-driven. Clean. Adaptive. Empathetic. Visual.", avatarUrl: "https://i.postimg.cc/J4ZLv2n1/Whats-App-Image-2025-05-21-at-17-06-54-5b7b43d0.jpg", initials: "SU" },
 ];
 
 const mentorMember: TeamMember = { name: "Karthik Barma", role: "Mentor", line: "Serial founder, innovation advisor", avatarUrl: "https://i.postimg.cc/C5DV6H7p/karthik.jpg", initials: "KB" };
