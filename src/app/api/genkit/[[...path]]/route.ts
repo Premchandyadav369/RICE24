@@ -1,6 +1,6 @@
 // src/app/api/genkit/[[...path]]/route.ts
 import {NextRequest} from 'next/server';
-import {createNextHandler} from '@genkit-ai/next';
+import createNextHandler from '@genkit-ai/next';
 import '@/ai/dev'; // This imports your flows
 
 export const dynamic = 'force-dynamic'; // Defaults to force-static in App Router
