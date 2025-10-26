@@ -3,12 +3,11 @@ import Image from 'next/image';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 
-export default function Footer() {
+export default function Footer({ lng }: { lng: string }) {
   const footerLinks = [
-    { href: '#', label: 'Privacy Policy' },
-    { href: '#', label: 'Terms of Service' },
-    { href: '/#franchisees', label: 'Apply as Franchisee' },
-    { href: '#', label: 'Join Waitlist' },
+    { href: `/${lng}/privacy`, label: 'Privacy Policy' },
+    { href: `/${lng}/terms`, label: 'Terms of Service' },
+    { href: `/${lng}/franchise`, label: 'Apply as Franchisee' },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -18,12 +17,12 @@ export default function Footer() {
       <div className="container py-12 px-4 md:px-6">
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
-            <Link href="/" className="flex items-center gap-2" aria-label="RICE Bharat Home">
+            <Link href={`/${lng}`} className="flex items-center gap-2" aria-label="RICE Bharat Home">
               <Image 
                 src="https://i.postimg.cc/FKX6pdCw/ricelogo.jpg" 
                 alt="RICE Bharat Logo" 
-                width={120}  // Adjust as per your logo's aspect ratio
-                height={30} // Adjust as per your logo's aspect ratio
+                width={120}
+                height={30}
                 className="h-10 w-auto" 
               />
             </Link>
@@ -76,7 +75,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-foreground">Newsletter</h3>
             <p className="text-sm text-muted-foreground mb-2">Stay updated with rural schemes and investor news.</p>
-            {/* Basic newsletter signup form - actual functionality would require backend */}
             <form className="flex gap-2">
               <input type="email" placeholder="Enter your email" className="flex-grow p-2 border rounded-md text-sm bg-background focus:ring-primary focus:border-primary" />
               <button type="submit" className="bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm hover:bg-primary/90 transition-colors">
