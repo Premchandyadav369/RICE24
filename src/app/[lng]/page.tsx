@@ -11,11 +11,13 @@ import MarketplaceDashboardSection from '@/components/sections/marketplace-dashb
 import FranchiseROICalculatorSection from '@/components/sections/franchise-roi-calculator-section';
 import FarmerImpactCalculatorSection from '@/components/sections/farmer-impact-calculator-section';
 import BlogSection from '@/components/sections/blog-section';
+import { useTranslation } from '@/i18n';
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: { lng: string } }) {
+  const { t } = await useTranslation(params.lng);
   return (
     <>
-      <HeroSection />
+      <HeroSection lng={params.lng} />
       <ProblemSolutionSection />
       <InteractiveFarmerJourneySection />
       <ProductsServicesSection />
