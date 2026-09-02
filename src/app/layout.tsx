@@ -3,8 +3,13 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Atelier — Design Agency',
-  description: 'We shape digital products that define brands and unlock exponential growth.',
+  title: 'Atelier — Digital Product & Design Agency',
+  description: 'We shape digital products that define brands and unlock exponential growth. UX and APP design for bold ventures.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

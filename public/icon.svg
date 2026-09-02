@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="atelierGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="silverAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D4D4D8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#atelierGrad)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#27272A" stroke-width="1.5"/>
+  <!-- Stylized Serif Lettermark 'A' -->
+  <path d="M32 14 L20.5 48 H25.2 L28.4 39.2 H35.6 L38.8 48 H43.5 L32 14 Z M32 23.8 L34.4 35.4 H29.6 L32 23.8 Z" fill="url(#silverAccent)"/>
+  <!-- Minimalist Studio Dot Accent -->
+  <circle cx="45.5" cy="18.5" r="2.5" fill="#FFFFFF"/>
+</svg>
