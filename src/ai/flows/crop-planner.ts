@@ -105,8 +105,8 @@ const cropPlannerFlow = ai.defineFlow(
             suggestedCrops: [{
                 cropName: "Millet (Generic)",
                 reasoning: "As a general fallback, millets are often resilient and suitable for varied Indian conditions. Please provide more specific details for a tailored recommendation.",
-                demandIndicator: "Medium",
-                seasonalFit: "Good",
+                demandIndicator: "Medium" as const,
+                seasonalFit: "Good" as const,
             }],
             intercroppingSuggestion: "Consider intercropping with pulses to improve soil fertility.",
             rotationAlert: "Ensure crop rotation to maintain soil health."

@@ -1,24 +1,10 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-// import ChatbotWidget from '@/components/chatbot/chatbot-widget'; // Removed chatbot import
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
-  title: 'RICE Bharat',
-  description: 'Empowering Bharat’s Small Farmers with Smart Tools, Storage & Markets.',
+  title: 'Atelier — Design Agency',
+  description: 'We shape digital products that define brands and unlock exponential growth.',
 };
 
 export default function RootLayout({
@@ -28,15 +14,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        {/* <ChatbotWidget /> */} {/* Removed chatbot widget */}
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans antialiased bg-black text-white w-full h-full min-h-screen">
+        {children}
         <Toaster />
       </body>
     </html>
   );
 }
+

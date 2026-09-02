@@ -31,7 +31,7 @@ const cropPriceChartData = [
 const chartConfig = {
   tomatoes: { label: "Tomatoes (₹/kg)", color: "hsl(var(--chart-1))" },
   chillies: { label: "Chillies (₹/kg)", color: "hsl(var(--chart-2))" },
-  cotton: { label: "Cotton (₹/quintal)", color: "hsl(var(--chart-3))" , yAxisId: "right" },
+  cotton: { label: "Cotton (₹/quintal)", color: "hsl(var(--chart-3))" },
 } satisfies ChartConfig;
 
 

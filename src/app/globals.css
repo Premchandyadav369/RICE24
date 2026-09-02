@@ -2,111 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer base {
-  :root {
-    --background: 85 30% 95%; /* Light, slightly desaturated green-ish white */
-    --foreground: 120 25% 20%; /* Dark, desaturated green */
-
-    --card: 85 30% 95%; /* Same as background */
-    --card-foreground: 120 25% 20%;
-
-    --popover: 85 30% 92%; /* Slightly darker than background */
-    --popover-foreground: 120 25% 20%;
-
-    --primary: 130 50% 45%; /* Vibrant mid-green */
-    --primary-foreground: 85 30% 95%; /* Light text on primary */
-
-    --secondary: 125 40% 65%; /* Lighter, slightly muted green */
-    --secondary-foreground: 120 25% 15%; /* Darker green for text on secondary */
-
-    --muted: 90 30% 90%; /* Very light, muted green */
-    --muted-foreground: 120 20% 40%; /* Muted green text */
-
-    --accent: 140 55% 50%; /* A brighter, slightly more blue-ish green */
-    --accent-foreground: 0 0% 100%; /* White text on accent */
-
-    --destructive: 0 70% 50%; /* Standard red for destructive actions */
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 120 20% 80%; /* Light green-ish gray border */
-    --input: 120 20% 90%; /* Light green-ish gray input background */
-    --ring: 130 50% 45%; /* Ring color same as primary */
-
-    --radius: 0.5rem;
-
-    /* Chart colors based on the greenery palette */
-    --chart-1: 130 50% 45%; /* primary green */
-    --chart-2: 140 55% 50%; /* accent green */
-    --chart-3: 100 40% 55%; /* a yellowish-green */
-    --chart-4: 35 30% 50%; /* an earthy brown as a contrast */
-    --chart-5: 125 35% 60%; /* a softer, muted green */
-
-    --sidebar-background: 110 25% 92%; /* Slightly darker light green for sidebar */
-    --sidebar-foreground: 120 25% 20%;
-    --sidebar-primary: 130 50% 45%;
-    --sidebar-primary-foreground: 85 30% 95%;
-    --sidebar-accent: 140 55% 50%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 120 20% 80%;
-    --sidebar-ring: 130 50% 45%;
-  }
-
-  .dark {
-    --background: 120 25% 15%; /* Dark, desaturated green */
-    --foreground: 85 30% 90%; /* Light, muted green-ish white */
-
-    --card: 120 25% 15%;
-    --card-foreground: 85 30% 90%;
-
-    --popover: 120 25% 12%; /* Slightly darker than dark background */
-    --popover-foreground: 85 30% 90%;
-
-    --primary: 130 50% 50%; /* Brighter green for dark mode primary */
-    --primary-foreground: 120 25% 10%; /* Very dark green for text on primary */
-
-    --secondary: 125 40% 35%; /* Darker, muted green */
-    --secondary-foreground: 85 30% 85%; /* Lighter green-ish text */
-
-    --muted: 120 20% 25%; /* Dark, very muted green */
-    --muted-foreground: 90 25% 70%; /* Muted light green text */
-
-    --accent: 140 60% 55%; /* Brighter accent green for dark mode */
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 60% 45%; /* Standard red for destructive actions */
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 120 15% 30%; /* Dark green-ish gray border */
-    --input: 120 15% 25%; /* Dark green-ish gray input background */
-    --ring: 130 50% 50%; /* Ring color same as primary */
-
-    /* Chart colors for dark mode */
-    --chart-1: 130 50% 50%;
-    --chart-2: 140 60% 55%;
-    --chart-3: 100 35% 50%;
-    --chart-4: 35 25% 45%;
-    --chart-5: 125 30% 55%;
-    
-    --sidebar-background: 120 25% 12%; /* Very dark green for sidebar */
-    --sidebar-foreground: 85 30% 90%;
-    --sidebar-primary: 130 50% 50%;
-    --sidebar-primary-foreground: 120 25% 10%;
-    --sidebar-accent: 140 60% 55%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 120 15% 30%;
-    --sidebar-ring: 130 50% 50%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
