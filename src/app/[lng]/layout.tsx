@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-// import ChatbotWidget from '@/components/chatbot/chatbot-widget'; // Removed chatbot import
+import ChatbotWidget from '@/components/chatbot/chatbot-widget';
+import { languages } from '@/i18n/settings';
+import { dir } from 'i18next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -21,20 +23,26 @@ export const metadata: Metadata = {
   description: 'Empowering Bharat’s Small Farmers with Smart Tools, Storage & Markets.',
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
+export default async function RootLayout({
   children,
+  params: { lng },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lng: string };
 }>) {
   return (
-    <html lang="en">
+    <html lang={lng} dir={dir(lng)}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-        <Header />
+        <Header lng={lng} />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
-        {/* <ChatbotWidget /> */} {/* Removed chatbot widget */}
+        <Footer lng={lng} />
+        <ChatbotWidget />
         <Toaster />
       </body>
     </html>
